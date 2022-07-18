@@ -11,18 +11,6 @@
  */
 class Solution {
 public:
-    TreeNode* findNode(TreeNode* root, int key){
-        if(!root)
-            return NULL;
-        
-        TreeNode* l = findNode(root->left, key);
-        if(root->val == key)
-            return root;
-        TreeNode* r = findNode(root->right, key);
-        
-        return l ? l : r;
-    }
-    
     TreeNode* deleteNode(TreeNode* root, int key) {
         if(!root)
             return NULL;
